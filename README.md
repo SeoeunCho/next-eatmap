@@ -55,6 +55,8 @@
 - Yarn으로 Next.js앱을 설치합니다. `yarn create next-app`
 - React-Icons를 설치합니다. `yarn add react-icons`
 - Prisma를 설치합니다. `yarn add --dev prisma` `yarn add @prisma/client`
+- React Query를 설치합니다. `yarn add react-query`
+- Axios를 설치합니다. `yarn add axios`
 - Vercel CLI를 설치합니다. `yarn global add vercel`
 - 프로젝트 시작 `yarn dev`
 

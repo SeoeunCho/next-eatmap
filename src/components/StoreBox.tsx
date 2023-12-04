@@ -10,7 +10,7 @@ import { HiOutlineMapPin } from "react-icons/hi2";
 import { StoreType } from "@/interface";
 
 interface StoreBoxProps {
-  store: StoreType;
+  store: StoreType | null;
   setStore: Dispatch<SetStateAction<any>>;
 }
 
@@ -49,10 +49,12 @@ export default function StoreBox({ store, setStore }: StoreBoxProps) {
               <AiOutlinePhone />
               {store?.phone || "번호없음"}
             </div>
-            <div className="mt-2 flex gap-2 items-center">
-              <AiOutlineInfoCircle />
-              {store?.storeType}
-            </div>
+            {store?.storeType && (
+              <div className="mt-2 flex gap-2 items-center">
+                <AiOutlineInfoCircle />
+                {store?.storeType}
+              </div>
+            )}
             {store?.category && (
               <div className="mt-2 flex gap-2 items-center">
                 <AiOutlineCheck />
