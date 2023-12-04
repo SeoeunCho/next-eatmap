@@ -22,10 +22,10 @@
 - 웹 구조 : Next.js SSR
 - 스타일링 : 심화된 스택 사용을 위한 Tailwind
 - 상태관리 : 전역 상태관리를 위한 Recoil + 캐싱을 위한 React-query
-- 라이브러리
-  - [ **React-Icons** ](https://react-icons.github.io/react-icons/) : 아이콘 스타일링 구현
 - 백엔드 관련 : 외부 API 사용과 데이터 처리에 대한 경험(Prisma)
   - [ **Kakao map API** ](https://developers.kakao.com/)에서 앱 생성 후, Javascript 키 필요
+- 라이브러리
+  - [ **React-Icons** ](https://react-icons.github.io/react-icons/) : 아이콘 스타일링 구현
 - 배포 관련: CI/CD(Vercel)
 
 <br />
@@ -33,15 +33,18 @@
 ## ⚙️ 사용 스택
 
 <div>
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat&logo=Next.js&logoColor=white" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redux-764ABC?style=flat&logo=Redux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat&logo=prisma&logoColor=white" />
+<!--   <img src="https://img.shields.io/badge/supabase-3FCF8E?style=flat&logo=supabase&logoColor=white" /> -->
+  <img src="https://img.shields.io/badge/React Hook Form-EC5990?style=flat&logo=reacthookform&logoColor=white" />
+  <img src="https://img.shields.io/badge/React Query-FF4154?style=flat&logo=reactquery&logoColor=white" />
   <img src="https://img.shields.io/badge/Recoil-3578E5?style=flat&logo=Recoil&logoColor=white" />
-  <img src="https://img.shields.io/badge/Sass-CC6699?style=flat&logo=Sass&logoColor=white" />
-  <img src="https://img.shields.io/badge/cssmodules-000000?style=flat&logo=cssmodules&logoColor=white" />
-  <img src="https://img.shields.io/badge/mui-007FFF?style=flat&logo=mui&logoColor=white" />
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=Firebase&logoColor=white" />
-  <img src="https://img.shields.io/badge/vercel-000000?style=flat&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kakao map API-FFCD00?style=flat&logo=kakao&logoColor=white" />
+  <img src="https://img.shields.io/badge/GoDaddy-1BDBDB?style=flat&logo=godaddy&logoColor=white" />
+  <img src="https://img.shields.io/badge/Google Analytics-E37400?style=flat&logo=googleanalytics&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white" />
 </div>
 
 <br />
@@ -56,7 +59,7 @@
 <br />
 
 ## 🔑 페이지 설명
-
+<!--
 <details>
 <summary>회원가입/로그인</summary>
 <div markdown="1">
@@ -129,7 +132,7 @@
 - 가입일과 팔로잉, 팔로워 숫자 확인
 
 </div>
-</details>
+</details>-->
 
 <!-- ## 🖥️ Screenshots -->
 <!-- <p>
