@@ -23,7 +23,7 @@ export default function StoreListPage({ stores }: { stores: StoreType[] }) {
                   {store?.upso_nm}
                 </div>
                 <div className="mt-1 text-xs truncate font-semibold leading-5 text-gray-500">
-                  {store?.upso_nm}
+                  {store?.cob_code_nm}
                 </div>
               </div>
             </div>
@@ -32,8 +32,8 @@ export default function StoreListPage({ stores }: { stores: StoreType[] }) {
                 {store?.rdn_code_nm}
               </div>
               <div className="mt-1 text-xs truncate font-semibold leading-5 text-gray-500">
-                {store?.tel_no || "번호없음"} | {store?.crtfc_gbn_nm} |{" "}
-                {store?.bizcnd_code_nm}
+                {store?.tel_no || "번호없음"} | {store?.crtfc_gbn_nm} 
+                {store?.bizcnd_code_nm && ` | ${store?.bizcnd_code_nm}`}
               </div>
             </div>
           </li>

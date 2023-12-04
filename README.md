@@ -24,6 +24,7 @@
 - 상태관리 : 전역 상태관리를 위한 Recoil + 캐싱을 위한 React-query
 - 백엔드 관련 : 외부 API 사용과 데이터 처리에 대한 경험(Prisma)
   - [ **Kakao map API** ](https://developers.kakao.com/)에서 앱 생성 후, Javascript 키 필요
+  - [ **Supabase** ](https://supabase.com/)에서 프로젝트 세팅 필요
 - 라이브러리
   - [ **React-Icons** ](https://react-icons.github.io/react-icons/) : 아이콘 스타일링 구현
 - 배포 관련: CI/CD(Vercel)
@@ -36,7 +37,7 @@
   <img src="https://img.shields.io/badge/Next.js-000000?style=flat&logo=Next.js&logoColor=white" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white" />
   <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat&logo=prisma&logoColor=white" />
-<!--   <img src="https://img.shields.io/badge/supabase-3FCF8E?style=flat&logo=supabase&logoColor=white" /> -->
+  <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white" />
   <img src="https://img.shields.io/badge/React Hook Form-EC5990?style=flat&logo=reacthookform&logoColor=white" />
   <img src="https://img.shields.io/badge/React Query-FF4154?style=flat&logo=reactquery&logoColor=white" />
   <img src="https://img.shields.io/badge/Recoil-3578E5?style=flat&logo=Recoil&logoColor=white" />
@@ -53,8 +54,11 @@
 
 - Yarn으로 Next.js앱을 설치합니다. `yarn create next-app`
 - React-Icons를 설치합니다. `yarn add react-icons`
+- Prisma를 설치합니다. `yarn add --dev prisma` `yarn add @prisma/client`
 - Vercel CLI를 설치합니다. `yarn global add vercel`
 - 프로젝트 시작 `yarn dev`
+
+<!-- supabase pw: mVOa4tdlt8lkIrcF -->
 
 <br />
 
