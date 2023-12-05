@@ -57,6 +57,7 @@
 - Prisma를 설치합니다. `yarn add --dev prisma` `yarn add @prisma/client`
 - React Query를 설치합니다. `yarn add react-query`
 - Axios를 설치합니다. `yarn add axios`
+- Next-auth를 설치합니다. `yarn add next-auth` `yarn add @auth/prisma-adapter`
 - Vercel CLI를 설치합니다. `yarn global add vercel`
 - 프로젝트 시작 `yarn dev`
 
