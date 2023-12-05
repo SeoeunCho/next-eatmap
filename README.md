@@ -1,4 +1,5 @@
 # 🍽️ Next.js 맛집 지도
+AIzaSyDh2dr_s5hfej1PV4kJigPi4kzgUBUKEWk
 <!-- ![image](https://github.com/SeoeunCho/react-twitter/blob/main/src/preview/react-twitter_preview.gif)
 
 > 👉 [사이트 바로가기](https://react-twitter-nine.vercel.app/)<br />
