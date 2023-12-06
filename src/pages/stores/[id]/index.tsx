@@ -55,7 +55,7 @@ export default function StorePage() {
                 카테고리
               </dt>
               <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                {store?.category}
+                {store?.category || "미정"}
               </dd>
             </div>
             <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -87,7 +87,7 @@ export default function StorePage() {
                 연락처
               </dt>
               <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                {store?.phone}
+                {store?.phone || "번호없음"}
               </dd>
             </div>
             <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -103,7 +103,7 @@ export default function StorePage() {
                 업종명
               </dt>
               <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                {store?.storeType}
+                {store?.storeType || "미정"}
               </dd>
             </div>
           </dl>

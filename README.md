@@ -1,7 +1,5 @@
 # 🍽️ Next.js 맛집 지도
 
-AIzaSyDh2dr_s5hfej1PV4kJigPi4kzgUBUKEWk
-
 <!-- ![image](https://github.com/SeoeunCho/react-twitter/blob/main/src/preview/react-twitter_preview.gif)
 
 > 👉 [사이트 바로가기](https://react-twitter-nine.vercel.app/)<br />
@@ -28,6 +26,12 @@ AIzaSyDh2dr_s5hfej1PV4kJigPi4kzgUBUKEWk
 - 백엔드 관련 : 외부 API 사용과 데이터 처리에 대한 경험(Prisma)
   - [ **Kakao map API** ](https://developers.kakao.com/)에서 앱 생성 후, Javascript 키 필요
   - [ **Supabase** ](https://supabase.com/)에서 프로젝트 세팅 필요
+  - [ **Next-auth & Prisma** ](https://authjs.dev/reference/adapter/prisma)
+    - [Prisma Adapter](https://authjs.dev/reference/adapter/prisma) 세팅 필요
+    - [Middleware](https://next-auth.js.org/configuration/nextjs#middleware) 세팅 필요
+    - [Google](https://console.developers.google.com/apis/credentials)에서 API키 생성필요
+    - [Naver](https://developers.naver.com/main/)에서 오픈 API 이용 신청 및 서비스 URL에 로컬 호스트 추가 필요
+    - [Kakao](https://developers.kakao.com/)에서 앱 등록 후 동의 항목 설정 및 API키, 활성화 필요
 - 라이브러리
   - [ **React-Icons** ](https://react-icons.github.io/react-icons/) : 아이콘 스타일링 구현
 - 배포 관련: CI/CD(Vercel)
