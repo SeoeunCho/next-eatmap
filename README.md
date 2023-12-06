@@ -1,5 +1,7 @@
 # 🍽️ Next.js 맛집 지도
+
 AIzaSyDh2dr_s5hfej1PV4kJigPi4kzgUBUKEWk
+
 <!-- ![image](https://github.com/SeoeunCho/react-twitter/blob/main/src/preview/react-twitter_preview.gif)
 
 > 👉 [사이트 바로가기](https://react-twitter-nine.vercel.app/)<br />
@@ -59,6 +61,7 @@ AIzaSyDh2dr_s5hfej1PV4kJigPi4kzgUBUKEWk
 - React Query를 설치합니다. `yarn add react-query`
 - Axios를 설치합니다. `yarn add axios`
 - Next-auth를 설치합니다. `yarn add next-auth` `yarn add @auth/prisma-adapter`
+- Recoil을 설치합니다. `yarn add recoil`
 - Vercel CLI를 설치합니다. `yarn global add vercel`
 - 프로젝트 시작 `yarn dev`
 
@@ -67,11 +70,12 @@ AIzaSyDh2dr_s5hfej1PV4kJigPi4kzgUBUKEWk
 <br />
 
 ## 🔑 페이지 설명
+
 <!--
 <details>
 <summary>회원가입/로그인</summary>
 <div markdown="1">
-  
+
 - 회원가입/로그인
   - 토글 버튼으로 회원가입/로그인 화면 전환
   - 아이디·비밀번호 중복확인 및 유효성 체크
@@ -84,7 +88,7 @@ AIzaSyDh2dr_s5hfej1PV4kJigPi4kzgUBUKEWk
 <details>
 <summary>홈</summary>
 <div markdown="2">
-  
+
 - 실시간 업데이트
 - 트윗 작성
   - 홈이 아닌 다른 페이지에서도 트윗할 수 있도록 왼쪽 메뉴바에 트윗하기 버튼 추가
@@ -106,7 +110,7 @@ AIzaSyDh2dr_s5hfej1PV4kJigPi4kzgUBUKEWk
 <details>
 <summary>탐색하기</summary>
 <div markdown="3">
-  
+
 ※ '탐색하기'에서의 대부분 기능들은 '홈'과 같으며 반복되는 코드들을 하나의 컴포넌트로 묶어 재사용할 수 있게 했습니다.
 
 - 검색창 및 트윗·사용자 탭
@@ -118,7 +122,7 @@ AIzaSyDh2dr_s5hfej1PV4kJigPi4kzgUBUKEWk
 <details>
 <summary>알림/북마크</summary>
 <div markdown="4">
-  
+
 - 알림 리트윗/답글/팔로우 탭
   - 누군가가 트윗에 리트윗·답글을 하면 실시간 알림 생성
   - 트윗 링크 및 리트윗·답글한 유저의 프로필 정보 링크로 이동 가능
@@ -132,7 +136,7 @@ AIzaSyDh2dr_s5hfej1PV4kJigPi4kzgUBUKEWk
 <details>
 <summary>프로필</summary>
 <div markdown="5">
-  
+
 - 헤더에 트윗한 개수 표시 및 로그아웃 가능
 - '프로필 수정', '북마크' 탭은 본인 프로필에서만 노출 됨
 - '한국어/English' 버튼으로 언어 변경 가능
