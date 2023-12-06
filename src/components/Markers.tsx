@@ -3,18 +3,18 @@ import { useCallback, useEffect, Dispatch, SetStateAction } from "react";
 
 interface MarkerProps {
   map: any;
-  storeDatas: StoreType[];
+  stores: StoreType[];
   setCurrentStore: Dispatch<SetStateAction<any>>;
 }
 export default function Markers({
   map,
-  storeDatas,
+  stores,
   setCurrentStore,
 }: MarkerProps) {
   const loadKakaoMarkers = useCallback(() => {
     if (map) {
       // 식당 데이터 마커 띄우기
-      storeDatas?.map((store) => {
+      stores?.map((store) => {
         var imageSrc = store?.category
             ? `/images/markers/${store?.category}.png`
             : "/images/markers/default.png", // 마커이미지의 주소입니다
@@ -72,7 +72,7 @@ export default function Markers({
         });
       });
     }
-  }, [map, setCurrentStore, storeDatas]);
+  }, [map, setCurrentStore, stores]);
 
   useEffect(() => {
     loadKakaoMarkers();
