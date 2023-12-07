@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Fastcampus NextMap",
-  description: "Next.js 14를 이용한 맛집 앱",
+  description: "Next.js 13을 이용한 맛집 앱",
 };
 
 export default function RootLayout({
