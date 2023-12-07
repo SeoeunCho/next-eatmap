@@ -136,6 +136,8 @@
 </div>
 </details>
 
+<br />
+
 ## 🖥️ Screenshots
 
 <div style="display: flex; justify-content: space-between;">
