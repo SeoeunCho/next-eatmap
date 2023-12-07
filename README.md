@@ -1,4 +1,4 @@
-# 🍽️ Next.js 맛집 지도
+# 🍳 Next.js 맛집 지도
 
 ![image](https://github.com/SeoeunCho/react-twitter/blob/main/src/preview/react-twitter_preview.gif)
 
