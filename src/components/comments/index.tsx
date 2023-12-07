@@ -32,15 +32,12 @@ export default function Comments({ storeId, page = "1" }: CommentProps) {
       <div className="text-base font-semibold leading-7 text-gray-900 mb-4">
         댓글 목록
       </div>
-      {/*comment form */}
       {status === "authenticated" && (
         <CommentForm storeId={storeId} refetch={refetch} />
       )}
 
-      {/*comment list */}
       <CommentList comments={comments} />
 
-      {/* pagination */}
       <Pagination
         total={comments?.totalPage}
         page={page}
