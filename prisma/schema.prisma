@@ -11,8 +11,8 @@ datasource db {
 }
 
 model User {
-  id            Int      @id @default(autoincrement())
-  email         String   @unique
+  id            Int       @id @default(autoincrement())
+  email         String    @unique
   name          String?
   emailVerified DateTime?
   image         String?
@@ -21,7 +21,7 @@ model User {
 }
 
 model Store {
-  id              Int      @id @default(autoincrement())
+  id              Int     @id @default(autoincrement())
   phone           String? // tel_no
   address         String? // rdn_code_nm
   lat             String? // y_dnts
@@ -33,19 +33,19 @@ model Store {
 }
 
 model Account {
-  id                        String  @id @default(cuid())
-  userId                    Int
-  type                      String
-  provider                  String
-  providerAccountId         String
-  refresh_token             String?  @db.Text
-  refresh_token_expires_in  Int?
-  access_token              String?  @db.Text
-  expires_at                Int?
-  token_type                String?
-  scope                     String?
-  id_token                  String?  @db.Text
-  session_state             String?
+  id                       String  @id @default(cuid())
+  userId                   Int
+  type                     String
+  provider                 String
+  providerAccountId        String
+  refresh_token            String? @db.Text
+  refresh_token_expires_in Int?
+  access_token             String? @db.Text
+  expires_at               Int?
+  token_type               String?
+  scope                    String?
+  id_token                 String? @db.Text
+  session_state            String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 

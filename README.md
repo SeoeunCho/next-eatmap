@@ -59,7 +59,7 @@
 
 - Yarn으로 Next.js앱을 설치합니다. `yarn create next-app`
 - React-Icons를 설치합니다. `yarn add react-icons`
-- Prisma를 설치합니다. `yarn add --dev prisma` `yarn add @prisma/client`
+- Prisma를 설치합니다. `yarn add --dev prisma` `yarn add @prisma/client` `yarn add --dev ts-node`
 - React Query를 설치합니다. `yarn add react-query`
 - Axios를 설치합니다. `yarn add axios`
 - Next-auth를 설치합니다. `yarn add next-auth` `yarn add @auth/prisma-adapter`
