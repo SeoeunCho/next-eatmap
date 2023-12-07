@@ -3,7 +3,7 @@ import { NextProvider, NextLayout } from "./providers";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Fastcampus NextMap",
+  title: "Next.js EatMap",
   description: "Next.js 13을 이용한 맛집 앱",
 };
 
