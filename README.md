@@ -32,8 +32,6 @@
     - [Google](https://console.developers.google.com/apis/credentials)에서 API키 생성필요
     - [Naver](https://developers.naver.com/main/)에서 오픈 API 이용 신청 및 서비스 URL에 로컬 호스트 추가 필요
     - [Kakao](https://developers.kakao.com/)에서 앱 등록 후 동의 항목 설정 및 API키, 활성화 필요
-- 라이브러리
-  - [ **React-Icons** ](https://react-icons.github.io/react-icons/) : 아이콘 스타일링 구현
 - 배포 관련: CI/CD(Vercel)
 
 <br />
@@ -68,6 +66,7 @@
 - Recoil을 설치합니다. `yarn add recoil`
 - React Hook Form을 설치합니다. `yarn add react-hook-form`
 - React-Toastify을 설치합니다. `yarn add react-toastify`
+- React Daum Postcode를 설치합니다. `yarn add react-daum-postcode`
 - Vercel CLI를 설치합니다. `yarn global add vercel`
 - 프로젝트 시작 `yarn dev`
 
