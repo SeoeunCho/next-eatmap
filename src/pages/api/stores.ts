@@ -99,11 +99,11 @@ export default async function handler(
         where: {
           id: id ? parseInt(id) : {},
         },
-        // include: {
-        //   likes: {
-        //     where: session ? { userId: session.user.id } : {},
-        //   },
-        // },
+        include: {
+          likes: {
+            where: session ? { userId: session.user.id } : {},
+          },
+        },
       });
 
       return res.status(200).json(id ? stores[0] : stores);

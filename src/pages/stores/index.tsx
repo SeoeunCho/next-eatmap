@@ -84,7 +84,7 @@ export default function StoreListPage() {
       <ul role="list" className="divide-y divide-gray-100">
         {isLoading ? (
           <Loading />
-        ) : stores?.pages?.[0].data.length !== 0 ? (
+        ) : stores?.pages?.[0].data?.length > 0 ? (
           stores?.pages?.map((page, index) => (
             <React.Fragment key={index}>
               {page.data.map((store: StoreType, i: number) => (
