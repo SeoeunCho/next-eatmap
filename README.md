@@ -1,6 +1,6 @@
 # 🍳 Next.js 맛집 지도
 
-![image](https://github.com/SeoeunCho/react-twitter/blob/main/src/preview/react-twitter_preview.gif)
+<img src="./preview/web01.png" alt="preview" width="100%" />
 
 > 👉 [사이트 바로가기](https://next-eatmap-five.vercel.app/)<br />
 
@@ -8,12 +8,14 @@
 
 ## 📋 Project
 
-- 이 프로젝트는 React에서 Firebase와 Redux를 연습하며 익숙해지기 위해 제작한 반응형 앱입니다.<br />
-  Firebase를 이용하여 데이터를 생성하고 사용자 인증에서 회원가입 및 로그인을 구축하고<br />
-  CRUD를 구현하여 게시글 등록, 답글, 리트윗, 좋아요 등의 소셜 SNS 기능 및 실시간 업데이트와 알림목록을 생성했습니다.<br />
-  Sass와 Media Query를 사용해 어떤 기기에도 모바일에 대응하는 반응형으로 작업했습니다.<br />
-  전역 상태 라이브러리 Recoil로 메뉴명 다국어 처리 기능을 추가하고 Vercel로 배포했습니다.
-  - Fastcampus에서 트위터 클론코딩을 수강하고 Kim-jaeoh의 nwitter를 참고하여 최대한 트위터앱과 비슷하게 구현했습니다.
+- 이 프로젝트는 Next.js 구조 및 SSR 개념을 이해하기 위해 제작한 맛집 지도 프로젝트입니다. <br />
+  맛집 목록/정보/등록, 찜하기, 댓글 등의 기능을 구현했습니다.<br />
+  Next.js의 API Routes를 기반으로 API를 호출하고 Prisma & Supabase를 이용해 데이터를 처리했습니다. <br />
+  Recoil로 전역 상태관리를 구현했습니다. React-Query로 캐싱하고 infinite scroll을 구현했습니다.<br />
+  맛집 공공데이터를 가져와 Kakao Map API를 연동하여 지도 위에 마커를 표시하고, 클릭하면 상세 정보를 확인할 수 있습니다.
+  Next-Auth로 사용자 인증 및 SNS 로그인을 구현했습니다. <br />
+  Velcel에 Github을 연동하여 자동으로 배포하고 Google Analytics를 적용했습니다.<br />
+  Geolocation API로 사용자의 현재 위치를 기반으로 정보를 가져올 수 있습니다.
 
 <br />
 
@@ -69,92 +71,82 @@
 - Vercel CLI를 설치합니다. `yarn global add vercel`
 - 프로젝트 시작 `yarn dev`
 
-<!-- supabase pw: mVOa4tdlt8lkIrcF -->
-
 <br />
 
 ## 🔑 페이지 설명
 
-<!--
 <details>
-<summary>회원가입/로그인</summary>
+<summary>메인 페이지</summary>
 <div markdown="1">
 
-- 회원가입/로그인
-  - 토글 버튼으로 회원가입/로그인 화면 전환
-  - 아이디·비밀번호 중복확인 및 유효성 체크
-  - 일반 이메일 형식 뿐만 아니라 구글·깃허브 계정으로도 로그인 가능
-  - 사이트에 들어왔을 때 유저의 상태 변화 추적 가능
-    - 로그인, 로그아웃, 어플리케이션 초기화(새로고침 or 재시작) 시 변화 추적
+- 맛집 목록 전체보기
+- Kakao Map API로 지도 위에 맛집 마커 표시
+- 맛집 클릭 시 상세 정보 확인 가능
+- 찜하기 가능
+- Next-auth를 이용한 사용자 인증 관리 및 SNS 로그인·로그아웃 가능
+- 로그인 시 메인 페이지로 라우터 이동
+- Geolocation API을 활용한 현재위치 가져오기 적용
+
 </div>
 </details>
 
 <details>
-<summary>홈</summary>
+<summary>맛집 목록 / 맛집 등록</summary>
 <div markdown="2">
 
-- 실시간 업데이트
-- 트윗 작성
-  - 홈이 아닌 다른 페이지에서도 트윗할 수 있도록 왼쪽 메뉴바에 트윗하기 버튼 추가
-  - 이미지 추가 및 삭제 기능
-  - 이모지 입력 기능
-  - 해쉬태그 입력 기능
-  - 트윗 수정·삭제
-- 왼쪽 사이드 메뉴
-  - 홈, 탐색하기, 알림, 북마크, 프로필 메뉴로 이동
-  - 홈이 아닌 다른 페이지에서도 트윗할 수 있도록 왼쪽메뉴바에 트윗하기 버튼 추가
-  - 유저 정보 확인 및 로그아웃 기능
-- 오른쪽 사이드 메뉴
-  - 트윗·유저 검색 기능
-  - 본인 제외한 유저 목록 조회 및 팔로우 추천(팔로우, 언팔로우 기능)
-- 반응형 액션 (답글, 리트윗, 좋아요, 북마크)
+- 맛집 목록
+  - React-query의 infinite scroll을 이용해 로딩 및 무한 스크롤 구현
+  - Recoil를 이용한 키워드 검색 & 위치 검색 필터링
+  - 상세 정보 확인 가능
+    - 맛집 정보 수정 및 삭제 가능
+    - 찜하기 기능, 비로그인 시 로그인 필요 토스트창 노출
+    - 특정 맛집 주소의 마커만 표시한 지도 확인 가능
+    - 댓글 등록 및 삭제 가능, 댓글이 5개 이상일 경우 페이지네이션 기능 구현
+
+
+- 맛집 등록
+  - 비로그인 시 로그인 페이지로 이동
+  - 로그인 한 경우 맛집 등록 페이지 노출
+  - 새로운 가게 등록 가능
+  - Daum 주소 API를 활용해 주소 검색
 </div>
 </details>
 
 <details>
-<summary>탐색하기</summary>
+<summary>찜한 가게</summary>
 <div markdown="3">
 
-※ '탐색하기'에서의 대부분 기능들은 '홈'과 같으며 반복되는 코드들을 하나의 컴포넌트로 묶어 재사용할 수 있게 했습니다.
-
-- 검색창 및 트윗·사용자 탭
-  - 반응형 액션 (답글, 리트윗, 좋아요, 북마크)
-  - 유저 목록 조회 및 팔로우, 언팔로우 가능
+- 찜한 맛집 리스트
+  - 비로그인 시 로그인 페이지로 이동
+  - 로그인 한 경우 해당 유저의 찜한 맛집 리스트 확인 가능
+  - 찜한 맛집이 10개 이상일 경우 페이지네이션 기능 구현
+  - 맛집 클릭시 상세정보로 이동
 </div>
 </details>
 
 <details>
-<summary>알림/북마크</summary>
+<summary>마이페이지</summary>
 <div markdown="4">
 
-- 알림 리트윗/답글/팔로우 탭
-  - 누군가가 트윗에 리트윗·답글을 하면 실시간 알림 생성
-  - 트윗 링크 및 리트윗·답글한 유저의 프로필 정보 링크로 이동 가능
-  - 팔로우한 유저의 프로필 정보 링크로 이동 가능
-
-- 북마크 트윗/답글 탭
-  - 북마크한 트윗·답글 목록 조회 및 취소 시 실시간 반영
+- 유저 정보
+  - 비로그인 시 로그인 페이지로 이동
+  - 로그인 한 경우 해당 유저의 정보 확인 가능
+  - 로그아웃 가능
+  - 내가 쓴 댓글 리스트 확인 가능, 등록한 댓글의 맛집 상세 정보로 이동 가능
 </div>
 </details>
 
-<details>
-<summary>프로필</summary>
-<div markdown="5">
+## 🖥️ Screenshots
 
-- 헤더에 트윗한 개수 표시 및 로그아웃 가능
-- '프로필 수정', '북마크' 탭은 본인 프로필에서만 노출 됨
-- '한국어/English' 버튼으로 언어 변경 가능
-- '프로필 수정' 클릭 시 모달창이 활성화 되어 배경·프로필 이미지, 닉네임·자기소개 추가/변경/삭제 가능
-- 가입일과 팔로잉, 팔로워 숫자 확인
-
+<div style="display: flex; justify-content: space-between;">
+  <img src="./preview/mobile01.png" alt="image" width="32.3%" height="auto">
+  <img src="./preview/mobile02.png" alt="image" width="32.3%" height="auto">
+  <img src="./preview/mobile03.png" alt="image" width="32.3%" height="auto">
 </div>
-</details>-->
 
-<!-- ## 🖥️ Screenshots -->
-<!-- <p>
-  <img src="./README/1.png"  width="47%" />
-  <img src="./README/2.png" width="47%" />
-  <img src="./README/3.png"  width="47%" />
-  <img src="./README/4.png" width="47%" />
-  <img src="./README/5.png"  width="47%" />
-</p> -->
+<img src="./preview/web02.png" alt="image" width="100%" height="auto">
+<img src="./preview/web03.png" alt="image" width="100%" height="auto">
+<img src="./preview/web04.png" alt="image" width="100%" height="auto">
+<img src="./preview/web05.png" alt="image" width="100%" height="auto">
+<img src="./preview/web06.png" alt="image" width="100%" height="auto">
+<img src="./preview/web07.png" alt="image" width="100%" height="auto">
