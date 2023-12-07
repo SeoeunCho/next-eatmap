@@ -23,7 +23,7 @@
 - 웹 구조 : Next.js SSR
 - 스타일링 : 심화된 스택 사용을 위한 Tailwind
 - 상태관리 : 전역 상태관리를 위한 Recoil + 캐싱을 위한 React-query
-- 백엔드 관련 : 외부 API 사용과 데이터 처리에 대한 경험(Prisma)
+- 백엔드 관련 : 외부 API 연동(카카오 지도 & 위치 정보 가져오기)과 데이터 처리에 대한 경험(Prisma)
   - [ **Kakao map API** ](https://developers.kakao.com/)에서 앱 생성 후, Javascript 키 필요
   - [ **Supabase** ](https://supabase.com/)에서 프로젝트 세팅 필요
   - [ **Next-auth & Prisma** ](https://authjs.dev/reference/adapter/prisma)
@@ -66,6 +66,8 @@
 - Axios를 설치합니다. `yarn add axios`
 - Next-auth를 설치합니다. `yarn add next-auth` `yarn add @auth/prisma-adapter`
 - Recoil을 설치합니다. `yarn add recoil`
+- React Hook Form을 설치합니다. `yarn add react-hook-form`
+- React-Toastify을 설치합니다. `yarn add react-toastify`
 - Vercel CLI를 설치합니다. `yarn global add vercel`
 - 프로젝트 시작 `yarn dev`
 
