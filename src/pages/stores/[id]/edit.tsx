@@ -65,7 +65,7 @@ export default function StoreEditPage() {
 
           if (result.status === 200) {
             // 성공 케이스
-            toast.success("맛집을 성공적으로 수정했습니다.");
+            toast.success("맛집 정보를 수정했습니다.");
             router.replace(`/stores/${result?.data?.id}`);
           } else {
             // 실패 케이스

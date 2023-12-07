@@ -23,7 +23,11 @@
 }
 
 .navbar__list--item:hover {
-  @apply text-gray-600;
+  @apply font-semibold underline;
+}
+
+.navbar__list--item--sign:hover {
+  @apply text-gray-500;
 }
 
 .layout {
@@ -48,7 +52,7 @@
   }
 
   .navbar__list--item--mobile:hover {
-    @apply text-gray-600;
+    @apply font-semibold underline;
   }
 
   .navbar__list--mobile {
