@@ -3,7 +3,6 @@
 ![image](https://github.com/SeoeunCho/react-twitter/blob/main/src/preview/react-twitter_preview.gif)
 
 > 👉 [사이트 바로가기](https://next-eatmap-five.vercel.app/)<br />
-> 작업 기간 : 7일
 
 <br />
 
