@@ -1,5 +1,6 @@
-import React, { useRef, useEffect, useCallback, useState } from "react";
-import Image from "next/image";
+"use client";
+
+import React, { useRef, useEffect, useCallback } from "react";
 import { StoreType } from "@/interface";
 
 import { useInfiniteQuery } from "react-query";
@@ -10,13 +11,11 @@ import Loading from "@/components/Loading";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 import Loader from "@/components/Loader";
 import SearchFilter from "@/components/SearchFilter";
-import { useRouter } from "next/router";
 import { useRecoilValue } from "recoil";
 import { searchState } from "@/atom";
 import StoreList from "@/components/StoreList";
 
 export default function StoreListPage() {
-  const router = useRouter();
   const ref = useRef<HTMLDivElement | null>(null);
   const pageRef = useIntersectionObserver(ref, {});
   const isPageEnd = !!pageRef?.isIntersecting;
@@ -94,8 +93,9 @@ export default function StoreListPage() {
             </React.Fragment>
           ))
         ) : (
-          
-          <div className="p-4 border border-gray-200 rounded-md text-sm text-gray-400">검색결과가 없습니다.</div>
+          <div className="p-4 border border-gray-200 rounded-md text-sm text-gray-400">
+            검색결과가 없습니다.
+          </div>
         )}
       </ul>
       {(isFetching || hasNextPage || isFetchingNextPage) && <Loader />}

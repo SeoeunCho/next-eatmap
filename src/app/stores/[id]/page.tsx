@@ -1,19 +1,27 @@
-import { useRouter } from "next/router";
+"use client";
+
+import { useRouter } from "next/navigation";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { StoreType } from "@/interface";
 import Loader from "@/components/Loader";
 import Map from "@/components/Map";
 import Marker from "@/components/Marker";
+import { toast } from "react-toastify";
+
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-import { toast } from "react-toastify";
 import Like from "@/components/Like";
 import Comments from "@/components/comments";
 
-export default function StorePage() {
+interface ParamsProps {
+  params: { id: string };
+  searchParams: { page: string };
+}
+
+export default function StorePage({ params, searchParams }: ParamsProps) {
   const router = useRouter();
-  const { id } = router.query;
+  const id = params.id;
   const { status } = useSession();
 
   const fetchStore = async () => {
@@ -26,7 +34,7 @@ export default function StorePage() {
     isFetching,
     isSuccess,
     isError,
-  } = useQuery(`store-${id}`, fetchStore, {
+  } = useQuery<StoreType>(`store-${id}`, fetchStore, {
     enabled: !!id,
     refetchOnWindowFocus: false,
   });
@@ -53,8 +61,8 @@ export default function StorePage() {
 
   if (isError) {
     return (
-      <div className="w-full h-screen mx-auto pt-[30%] text-red-500 text-center font-semibold">
-        다시 시도해주세요.
+      <div className="w-full h-screen mx-auto pt-[10%] text-red-500 text-center font-semibold">
+        다시 시도해주세요
       </div>
     );
   }
@@ -162,7 +170,7 @@ export default function StorePage() {
             <Map lat={store?.lat} lng={store?.lng} zoom={1} />
             <Marker store={store} />
           </div>
-          <Comments storeId={store.id} />
+          <Comments storeId={store.id} page={searchParams.page} />
         </>
       )}
     </>

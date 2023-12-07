@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
@@ -8,6 +9,7 @@ interface CommentFormProps {
 }
 
 export default function CommentForm({ storeId, refetch }: CommentFormProps) {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -27,6 +29,7 @@ export default function CommentForm({ storeId, refetch }: CommentFormProps) {
           toast.success("댓글을 등록했습니다.");
           resetField("body");
           refetch?.();
+          router.replace(`/stores/${storeId}`);
         } else {
           toast.error("다시 시도해주세요.");
         }
