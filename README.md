@@ -1,8 +1,8 @@
 # 🍽️ Next.js 맛집 지도
 
-<!-- ![image](https://github.com/SeoeunCho/react-twitter/blob/main/src/preview/react-twitter_preview.gif)
+![image](https://github.com/SeoeunCho/react-twitter/blob/main/src/preview/react-twitter_preview.gif)
 
-> 👉 [사이트 바로가기](https://react-twitter-nine.vercel.app/)<br />
+> 👉 [사이트 바로가기](https://next-eatmap-five.vercel.app/)<br />
 > 작업 기간 : 7일
 
 <br />
@@ -16,7 +16,7 @@
   전역 상태 라이브러리 Recoil로 메뉴명 다국어 처리 기능을 추가하고 Vercel로 배포했습니다.
   - Fastcampus에서 트위터 클론코딩을 수강하고 Kim-jaeoh의 nwitter를 참고하여 최대한 트위터앱과 비슷하게 구현했습니다.
 
-<br /> -->
+<br />
 
 ## 💡 학습
 
