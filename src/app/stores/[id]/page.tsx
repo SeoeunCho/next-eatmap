@@ -76,8 +76,11 @@ export default function StorePage({ params, searchParams }: ParamsProps) {
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="md:flex justify-between items-center py-4 md:py-0">
           <div className="px-4 sm:px-0">
-            <h3 className="text-base font-semibold leading-7 text-gray-900">
+            <h3 className="flex gap-2 text-base font-semibold leading-7 text-gray-900">
               {store?.name}
+              {status === "authenticated" && store && (
+                <Like storeId={store.id} />
+              )}
             </h3>
             <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
               {store?.address}
@@ -85,7 +88,6 @@ export default function StorePage({ params, searchParams }: ParamsProps) {
           </div>
           {status === "authenticated" && store && (
             <div className="flex items-center gap-4 px-4 py-3">
-              {<Like storeId={store.id} />}
               <Link
                 className="underline hover:text-gray-400 text-sm"
                 href={`/stores/${store?.id}/edit`}

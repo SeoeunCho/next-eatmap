@@ -1,6 +1,7 @@
 import { StoreType } from "@/interface";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Like from "./Like";
 
 interface StoreListProps {
   store?: StoreType;
@@ -27,8 +28,9 @@ export default function StoreList({ store, i }: StoreListProps) {
           alt="아이콘 이미지"
         />
         <div className="">
-          <div className="text-sm font-semibold leading-6 text-gray-900">
+          <div className="flex gap-2 text-sm font-semibold leading-6 text-gray-900">
             {store?.name}
+            {store && <Like storeId={store.id} />}
           </div>
           <div className="mt-1 text-xs truncate font-semibold leading-5 text-gray-500">
             {store?.storeType}

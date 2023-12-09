@@ -18,7 +18,7 @@ export default function StoreBox() {
   const [store, setStore] = useRecoilState(currentStoreState);
 
   return (
-    <div className="fixed transition ease-in-out delay-150 inset-x-0 mx-auto bottom-20 rounded-lg shadow-lg max-w-sm md:max-w-xl z-10 w-full bg-white">
+    <div className="fixed transition ease-in-out delay-150 inset-x-0 mx-auto bottom-20 rounded-lg shadow-lg max-w-sm md:max-w-xl z-50 w-full bg-white">
       {store && (
         <>
           <div className="p-8">
@@ -35,7 +35,10 @@ export default function StoreBox() {
                   alt="아이콘 이미지"
                 />
                 <div>
-                  <div className="font-semibold">{store?.name}</div>
+                  <div className="flex justify-between font-semibold gap-2">
+                    {store?.name}
+                    <Like storeId={store.id} />
+                  </div>
                   <div className="text-sm">{store?.storeType}</div>
                 </div>
               </div>
@@ -48,7 +51,6 @@ export default function StoreBox() {
                 <HiOutlineMapPin />
                 {store?.address || "주소 미등록"}
               </div>
-              <Like storeId={store.id} />
             </div>
             <div className="mt-2 flex gap-2 items-center">
               <AiOutlinePhone />
